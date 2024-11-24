@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background-color:pink;
+}
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    gap:1rem;
+    padding:1rem;
+}
+section{
+ background-color:white;   
+ border-radius:0.5rem; 
+}
+.toolsboard{
+    width:15vw;
+    height:90vh;
+    padding:1rem 1.3rem 0;
+}
+.row .options{
+    list-style:none;
+    margin:10px 0 0 5px;
+}
+.row .options .option{
+    display:flex;
+    align-items:center;
+    margin-bottom:10px;
+}
+.option:where(span,label){
+    color:#5A6168;
+    cursor:pointer;
+    padding-left:0.7rem;
+}
+#fill-color:checked ~label{
+    color:#4A98F7;
+}
+.option:is(:hover,.active) img{
+    filter:invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+.option:is(:hover,.active) :where(span,label){
+    color:#4A98F7;
+}
+ .option,#fill-color{
+    cursor:pointer;
+ }
+ .option #size-slider{
+    width:100%;
+    height:0.3rem;
+    margin-top:0.7rem;
+ }
+ .colors .options{
+    display:flex;
+    justify-content:space-between;
+ }
+ .colors .option{
+    height:2rem;
+    width:2rem;
+    background-color:red;
+    border:0.09rem solid;
+    border-radius:50%;
+    margin-top:0.2rem;
+    margin-left:-1rem;
+ }
+ .option #color-picker{
+    opacity:0;
+    cursor:pointer;
+ }
+ .colors .option:nth-child(2){
+    background-color:green;
+    border:0.09rem solid;
+ }
+ .colors .option:nth-child(3){
+    background-color:blue;
+    border:0.09rem solid;
+ }
+ .colors .option:nth-child(4){
+    background-color:black;
+    border:0.09rem solid;
+ }
+ .colors .option:nth-child(5){
+    background-color:white;
+    border:0.09rem solid;
+ }
+.drawingboard{
+    width:70vw;
+    height:90vh;
+}
+.clear-canvas{
+    background-color: lightgrey;
+    color:black;
+    width:100%;
+    height:3rem;
+    font-size:1rem;
+}
+.save-img{
+    background-color: lightgrey;
+    color:black;
+    width:100%;
+    margin-top:0.5rem;
+    height:3rem;
+    font-size:1rem;
+}
+.drawingboard canvas{
+    width:100%;
+    height:100%;
+}
+@media screen and (min-width:600px){
+    html{
+        font-size:62.5%;
+    }
+}
+@media screen and (min-width:1024px){
+    html{
+        font-size:80%;
+    }
+}
+@media screen and (min-width:1440px){
+    html{
+        font-size:100%;
+    }
+}
+@media screen and (min-width:2560px){
+    html{
+        font-size:200%;
+    }
+}
+@media screen and (max-width:600px){
+    html{
+        font-size:35%;
+    }
+}
+@media screen and (max-width:425px){
+    html{
+        font-size:30%;
+    }
+}
+@media screen and (max-width:375px){
+    html{
+        font-size:14%;
+    }
+}
